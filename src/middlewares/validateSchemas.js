@@ -8,7 +8,8 @@ export default function validateSchema(schema) {
             const errors = validation.error.details.map(detail => detail.message);
             throw error.unprocEntity(errors);
         }
-
-        next()
+        else{
+            next()
+        }
     }
 }
