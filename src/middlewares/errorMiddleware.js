@@ -7,6 +7,11 @@ export default function errorHandler(error,req,res,next) {
     if(error.type === "unprocessableEntity"){
         return res.status(httpStatus.UNPROCESSABLE_ENTITY).send(error.message)
     }
+    if(error.type === "Conflict"){
+        return res.status(httpStatus.CONFLICT).send(error.message)
+    }
+
+
 
     return res.status(httpStatus.INTERNAL_SERVER_ERROR).send("Sorry, something went wrong ")
 }

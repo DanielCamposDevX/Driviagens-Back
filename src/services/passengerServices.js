@@ -1,4 +1,3 @@
-import { error } from "../errors/errors.js";
 import { PassengerRep } from "../repositories/passengerRepository.js"
 
 

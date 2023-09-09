@@ -12,9 +12,15 @@ function unprocEntity(resource){
     }
 }
 
+function conflict(resource){
+    return{
+        type: "Conflict",
+        message: `${resource} already exists`
+    }
+}
 
 
 
 
 
-export const error = {notFound,unprocEntity}
+export const error = {notFound,unprocEntity,conflict}
