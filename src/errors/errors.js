@@ -15,7 +15,7 @@ function unprocEntity(resource){
 function conflict(resource){
     return{
         type: "Conflict",
-        message: `${resource} already exists`
+        message: `${resource} Conflict`
     }
 }
 
