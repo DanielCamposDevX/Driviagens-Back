@@ -9,9 +9,16 @@ async function newFlight(req,res){
 
 
 
+async function getFlights(req, res) {
+    const reqQuery = req.query;
+    const flights = await flightServices.showFlights(reqQuery);
+    return res.status(httpStatus.OK).send(flights)
+}
 
 
 
 
 
-export const flightControllers = { newFlight };
+
+
+export const flightControllers = { newFlight,getFlights };

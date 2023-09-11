@@ -9,4 +9,11 @@ const flightSchema = extendedJoi.object({
     date: extendedJoi.date().format('DD-MM-YYYY').utc().required()
 });
 
-export const flightSchemas = { flightSchema };
+const dateSchema = extendedJoi.object({
+    'smaller-date': extendedJoi.date().format('DD-MM-YYYY').utc().required(),
+    'bigger-date': extendedJoi.date().format('DD-MM-YYYY').utc().required()
+});
+
+
+
+export const flightSchemas = { flightSchema, dateSchema };

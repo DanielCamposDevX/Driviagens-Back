@@ -24,9 +24,15 @@ function InternalServer(resource) {
         message: `${resource}`
     }
 }
+function BadReq(resource) {
+    return {
+        type: "BadReq",
+        message: `${resource}`
+    }
+}
 
 
 
 
 
-export const error = { notFound, unprocEntity, conflict, InternalServer };
+export const error = { notFound, unprocEntity, conflict, InternalServer, BadReq };
