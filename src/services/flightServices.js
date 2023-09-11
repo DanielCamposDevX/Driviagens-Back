@@ -75,6 +75,7 @@ async function showFlights(reqQuery) {
       SELECT *
       FROM flights
       ${queryParts.length > 0 ? 'WHERE ' + queryParts.join(' AND ') : ''}
+      ORDER BY date DESC;
     `;
 
     const flights = await flightRepositories.selectFlights(query, queryParams);
