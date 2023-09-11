@@ -10,6 +10,9 @@ export default function errorHandler(error,req,res,next) {
     if(error.type === "Conflict"){
         return res.status(httpStatus.CONFLICT).send(error.message)
     }
+    if(error.type === "Server"){
+        return res.status(httpStatus.INTERNAL_SERVER_ERROR.send(error.message))
+    }
 
 
 

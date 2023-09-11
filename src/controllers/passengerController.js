@@ -10,11 +10,15 @@ async function postPassenger(req, res) {
 }
 
 
+async function getPassengerTravels(req,res) {
+    const { name } = req.query;
+    const list = await PassengerServices.passengerTravels(name);
+    res.status(httpStatus.OK).send(list);
+}
 
 
 
 
 
 
-
-export const passengerControllers = { postPassenger };
+export const passengerControllers = { postPassenger, getPassengerTravels };
